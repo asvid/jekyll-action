@@ -1,10 +1,9 @@
 FROM ruby:2.7-alpine
 
-LABEL version="2.0.1"
-LABEL repository="https://github.com/helaili/jekyll-action"
-LABEL homepage="https://github.com/helaili/jekyll-action"
-LABEL maintainer="Alain Hélaïli <helaili@github.com>"
-
+LABEL version="0.0.1"
+LABEL repository="https://github.com/asvid/jekyll-action"
+LABEL homepage="https://github.com/asvid/jekyll-action"
+LABEL maintainer="Adam Świderski <adam.swiderski89@gmail.com>"
 
 RUN sudo apt-get -y install plantuml
 COPY plantuml.jar /usr/share/plantuml/plantuml.jar
