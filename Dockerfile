@@ -12,13 +12,14 @@ RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
 
+RUN apk add --no-cache openjdk8
+
 # debug
 RUN bundle version
 
 COPY LICENSE README.md /
 
 COPY entrypoint.sh /
-
 
 RUN apk add --no-cache graphviz ttf-droid ttf-droid-nonlatin curl \
     && mkdir /app \
