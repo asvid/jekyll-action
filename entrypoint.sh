@@ -3,8 +3,6 @@ set -e
 
 echo "Starting the Jekyll Action"
 
-sudo apt-get -y install plantuml
-
 if [ -n "$INPUT_PRE_BUILD_COMMANDS" ]; then
   echo "Execute pre-build commands specified by the user."
   eval "$INPUT_PRE_BUILD_COMMANDS"
