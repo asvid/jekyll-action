@@ -5,6 +5,10 @@ LABEL repository="https://github.com/helaili/jekyll-action"
 LABEL homepage="https://github.com/helaili/jekyll-action"
 LABEL maintainer="Alain Hélaïli <helaili@github.com>"
 
+
+RUN sudo apt-get -y install plantuml
+COPY plantuml.jar /usr/share/plantuml/plantuml.jar
+
 RUN apk add --no-cache git build-base
 # Allow for timezone setting in _config.yml
 RUN apk add --update tzdata
