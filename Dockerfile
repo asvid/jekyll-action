@@ -5,7 +5,7 @@ LABEL repository="https://github.com/asvid/jekyll-action"
 LABEL homepage="https://github.com/asvid/jekyll-action"
 LABEL maintainer="Adam Świderski <adam.swiderski89@gmail.com>"
 
-RUN apt-get -y install plantuml
+RUN apk add --no-cache plantuml
 COPY plantuml.jar /usr/share/plantuml/plantuml.jar
 
 RUN apk add --no-cache git build-base
